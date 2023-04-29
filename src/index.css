@@ -24,3 +24,9 @@ body {
     scroll-behavior: smooth;
     font-family: 'Roboto', sans-serif;
 }
+
+.search-bar{
+  border:none;
+  outline:none;
+  width:350px;
+}

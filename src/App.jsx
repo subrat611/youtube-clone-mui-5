@@ -11,7 +11,6 @@ import {
 function App() {
   return (
     <Box sx={{ backgroundColor: "#000", color: "#fff" }}>
-      <p>Youtube Clone with MUI-5</p>
       <Routes>
         <Route path="/" element={<Navbar />}>
           <Route index element={<Feed />} />
