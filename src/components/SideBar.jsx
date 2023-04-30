@@ -20,7 +20,7 @@ export default function SideBar() {
     >
       {categories.map((category) => (
         <button
-          key={categories.name}
+          key={category.name}
           className="category-btn"
           style={{
             background: category.name === selectedCategory && "#fcfcfc3a",

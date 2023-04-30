@@ -26,14 +26,6 @@ export default function Feed() {
         }}
       >
         <SideBar />
-        <Typography
-          sx={{
-            mt: 1.5,
-            color: "#fff",
-          }}
-        >
-          Copyright 2023 youtube clone
-        </Typography>
       </Box>
     </Stack>
   );
