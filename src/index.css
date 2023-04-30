@@ -30,3 +30,41 @@ body {
   outline:none;
   width:350px;
 }
+
+.category-btn{
+  font-weight: bold !important;
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  cursor:pointer;
+  background: transparent;
+  outline: none;
+  border: none;
+
+  padding: 7px 15px;
+  margin: 10px 0px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  color: #f6f4f2;
+  font-size: 1rem;
+}
+
+.category-btn span:last-child {
+  margin-left: 1rem;
+}
+
+.category-btn:hover {
+  background-color: #fcfcfc3a !important;
+}
+
+
+@media screen and (max-width: 900px) {
+  .category-btn{
+    margin: 10px;
+  }
+
+  .category-btn span:last-child {
+    margin: 0.2rem;
+  }
+}
