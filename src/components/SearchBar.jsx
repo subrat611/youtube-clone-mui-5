@@ -36,7 +36,7 @@ export default function SearchBar() {
           borderStartStartRadius: 0,
           borderBottomLeftRadius: 0,
           ":hover": {
-            background: "rgba(255,255,255,0.2)",
+            background: " rgba(255,255,255,0.2)",
           },
         }}
         type="submit"
