@@ -3,7 +3,7 @@ import { categories } from "../utils/constants";
 
 const selectedCategory = "Home";
 
-export default function SideBar() {
+export default function SideBar({ selectedCategory, setSelectedCategory }) {
   return (
     <Stack
       direction="row"
@@ -26,6 +26,7 @@ export default function SideBar() {
             background: category.name === selectedCategory && "#fcfcfc3a",
             color: "#fff",
           }}
+          onClick={() => setSelectedCategory(category.name)}
         >
           <span>{category.icon}</span>
           <span

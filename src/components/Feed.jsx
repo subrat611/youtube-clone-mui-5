@@ -1,8 +1,18 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { useState, useEffect } from "react";
 import { SideBar, Videos } from "./index";
+import AxiosApi from "../utils/api";
 
 export default function Feed() {
+  const [selectedCategory, setselectedCategory] = useState("Home");
+  const [videos, setvideos] = useState([]);
+
+  useEffect(() => {
+    AxiosApi(`search?part=snippet&q=${selectedCategory.toLowerCase()}`).then(
+      (data) => setvideos(data.items)
+    );
+  }, [selectedCategory]);
+
   return (
     <Stack
       sx={{
@@ -25,7 +35,10 @@ export default function Feed() {
           },
         }}
       >
-        <SideBar />
+        <SideBar
+          selectedCategory={selectedCategory}
+          setSelectedCategory={setselectedCategory}
+        />
       </Box>
 
       <Box
@@ -44,10 +57,10 @@ export default function Feed() {
             textAlign: "center",
           }}
         >
-          New Videos
+          {selectedCategory} Videos
         </Typography>
 
-        <Videos videos={[]} />
+        <Videos videos={videos} />
       </Box>
     </Stack>
   );
