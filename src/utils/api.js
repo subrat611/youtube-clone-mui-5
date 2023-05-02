@@ -14,6 +14,5 @@ const options = {
 };
 
 export default async function AxiosApi(url) {
-  const { data } = await axios.get(`${BASE_URI}/${url}`, options);
-  return data;
+  return await axios.get(`${BASE_URI}/${url}`, options);
 }

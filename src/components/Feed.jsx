@@ -1,6 +1,6 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { useState, useEffect } from "react";
-import { SideBar, Videos } from "./index";
+import { SideBar, CategoryVideos } from "./index";
 import AxiosApi from "../utils/api";
 
 export default function Feed() {
@@ -9,7 +9,7 @@ export default function Feed() {
 
   useEffect(() => {
     AxiosApi(`search?part=snippet&q=${selectedCategory.toLowerCase()}`).then(
-      (data) => setvideos(data.items)
+      ({ data }) => setvideos(data.items)
     );
   }, [selectedCategory]);
 
@@ -60,7 +60,7 @@ export default function Feed() {
           {selectedCategory} Videos
         </Typography>
 
-        <Videos videos={videos} />
+        {videos && <CategoryVideos videos={videos} />}
       </Box>
     </Stack>
   );
