@@ -10,7 +10,10 @@ export default function VideoCard({ video }) {
   return (
     <Card
       sx={{
-        width: 350,
+        width: {
+          md: "320px",
+          xs: "100%",
+        },
         my: 2,
       }}
     >

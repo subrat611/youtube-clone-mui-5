@@ -20,6 +20,7 @@ export const categories = [
   { name: "Movie", icon: <TheatersOutlinedIcon /> },
   { name: "shopping", icon: <LocalMallOutlinedIcon /> },
   { name: "Coding", icon: <CodeOutlinedIcon /> },
+  { name: "Traversy Media", icon: <CodeOutlinedIcon /> },
   // { name: "ReactJS", icon: <CodeIcon /> },
   // { name: "NextJS", icon: <CodeIcon /> },
   // { name: "Podcast", icon: <GraphicEqIcon /> },
