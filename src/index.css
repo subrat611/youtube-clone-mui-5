@@ -25,6 +25,11 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.react-player {
+  height: 77vh !important;
+  width: 100% !important;
+}
+
 .search-bar{
   border:none;
   outline:none;
@@ -66,5 +71,21 @@ body {
 
   .category-btn span:last-child {
     margin: 0.2rem;
+  }
+  .search-bar{
+    width:200px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .scroll-horizontal {
+    overflow: auto !important;
+  }
+
+  .react-player {
+    height: 45vh !important;
+  }
+  .search-bar{
+    width:200px;
   }
 }

@@ -4,10 +4,21 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function SearchBar() {
+  const [searchItem, setSearchItem] = useState("");
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (searchItem) {
+      navigate(`/search/${searchItem}`);
+      setSearchItem("");
+    }
+  };
+
   return (
     <Paper
       component="form"
-      onSubmit={() => {}}
       sx={{
         borderRadius: 10,
         border: "1px solid #717171",
@@ -17,12 +28,13 @@ export default function SearchBar() {
         boxShadow: "none",
         mr: { sm: 10 },
       }}
+      onSubmit={handleSubmit}
     >
       <input
         className="search-bar"
         placeholder="Search"
-        value=""
-        onChange={() => {}}
+        value={searchItem}
+        onChange={(e) => setSearchItem(e.target.value)}
         style={{
           backgroundColor: "#000",
           color: "#fff",

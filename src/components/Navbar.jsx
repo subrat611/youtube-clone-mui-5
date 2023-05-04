@@ -9,7 +9,7 @@ export default function Navbar() {
   return (
     <>
       <Stack
-        direction="row"
+        direction={{ xs: "column", md: "row" }}
         alignItems="center"
         justifyContent="space-between"
         p={2}
